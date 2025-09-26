@@ -1,4 +1,4 @@
-// === Product List with 30 items ===
+// === Product List (no photo property needed now) ===
 const products = [
   { name: "Rice (5kg bag)", desc: "Staple food for many families.", stock: 8 },
   { name: "Beans (2kg bag)", desc: "Rich in protein, essential for nutrition.", stock: 8 },
@@ -136,6 +136,11 @@ function startRotatingMessages(messages, element) {
   }
 }
 
+// === Generate Unsplash URL for each product ===
+function getPhotoURL(productName) {
+  return `https://source.unsplash.com/400x300/?${encodeURIComponent(productName)}`;
+}
+
 // === Render donor products ===
 function renderDonorProducts() {
   donorProducts.innerHTML = "";
@@ -143,6 +148,7 @@ function renderDonorProducts() {
     donorProducts.innerHTML += `
       <div class="product-card">
         <h3>${prod.name}</h3>
+        <img src="${getPhotoURL(prod.name)}" alt="${prod.name}" class="product-img">
         <p>${prod.desc}</p>
         <label for="donateQty${index}">Select Quantity:</label>
         <select id="donateQty${index}">
@@ -162,6 +168,7 @@ function renderRequestProducts() {
     requestProducts.innerHTML += `
       <div class="product-card">
         <h3>${prod.name}</h3>
+        <img src="${getPhotoURL(prod.name)}" alt="${prod.name}" class="product-img">
         <p>${prod.desc}</p>
         <p><strong>In Stock:</strong> ${prod.stock}</p>
         <label for="requestQty${index}">Request Quantity:</label>
