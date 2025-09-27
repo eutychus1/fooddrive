@@ -3,35 +3,35 @@
 // === Products array (no photo links yet) ===
 const products = [
   { name: "Rice (5kg bag)", desc: "Staple food for many families.", stock: 8,  },
-  { name: "Beans (2kg bag)", desc: "Rich in protein, essential for nutrition.", stock: 8, photo: "" },
-  { name: "Maize Flour (2kg bag)", desc: "Used to make staple meals like ugali.", stock: 8, photo: "" },
-  { name: "Cooking Oil (3L)", desc: "Basic ingredient for preparing meals.", stock: 8, photo: "" },
-  { name: "Sugar (2kg bag)", desc: "For tea and other uses.", stock: 8, photo: "" },
-  { name: "Salt (1kg bag)", desc: "Essential seasoning for cooking.", stock: 8, photo: "" },
-  { name: "Tea Leaves (500g)", desc: "Warm drinks for families.", stock: 8, photo: "" },
-  { name: "Bread (Loaf)", desc: "Quick meal for breakfast.", stock: 8, photo: "" },
-  { name: "Milk (1L pack)", desc: "Nutritional drink for children.", stock: 8, photo: "" },
-  { name: "Cooking Gas Voucher", desc: "Helps families cook safely.", stock: 8, photo: "" },
-  { name: "Vegetables Basket", desc: "Fresh greens for healthy meals.", stock: 8, photo: "" },
-  { name: "Fruits Basket", desc: "Boosts vitamins & immunity.", stock: 8, photo: "" },
-  { name: "Sanitary Pads Pack", desc: "Hygiene for women & girls.", stock: 8, photo: "" },
-  { name: "Soap Bars", desc: "For hygiene and cleanliness.", stock: 8, photo: "" },
-  { name: "Toothpaste & Brushes", desc: "Oral care kits.", stock: 8, photo: "" },
-  { name: "Clothes (Adults)", desc: "For families in need.", stock: 8, photo: "" },
-  { name: "Clothes (Children)", desc: "Comfortable clothing for kids.", stock: 8, photo: "" },
-  { name: "Blankets", desc: "Warmth for cold nights.", stock: 8, photo: "" },
-  { name: "Mosquito Nets", desc: "Protection from malaria.", stock: 8, photo: "" },
-  { name: "Shoes (Adults)", desc: "Durable footwear for adults.", stock: 8, photo: "" },
-  { name: "Shoes (Children)", desc: "Footwear for growing children.", stock: 8, photo: "" },
-  { name: "School Supplies Kit", desc: "Books, pencils, pens for students.", stock: 8, photo: "" },
-  { name: "Cooking Utensils", desc: "Pots, pans, essential items.", stock: 8, photo: "" },
-  { name: "Detergent Powder", desc: "Washing clothes and cleaning.", stock: 8, photo: "" },
-  { name: "Baby Formula", desc: "Nutrition for infants.", stock: 8, photo: "" },
-  { name: "Diapers Pack", desc: "For infants and toddlers.", stock: 8, photo: "" },
-  { name: "First Aid Kit", desc: "Basic medical supplies.", stock: 8, photo: "" },
-  { name: "Wheelchair", desc: "Mobility aid for the disabled.", stock: 8, photo: "" },
-  { name: "Water Bottles (Pack)", desc: "Clean drinking water.", stock: 8, photo: "" },
-  { name: "Bedding Sets", desc: "Complete bedding for families.", stock: 8, photo: "" }
+  { name: "Beans (2kg bag)", desc: "Rich in protein, essential for nutrition.", stock: 8, },
+  { name: "Maize Flour (2kg bag)", desc: "Used to make staple meals like ugali.", stock: 8, },
+  { name: "Cooking Oil (3L)", desc: "Basic ingredient for preparing meals.", stock: 8,},
+  { name: "Sugar (2kg bag)", desc: "For tea and other uses.", stock: 8,},
+  { name: "Salt (1kg bag)", desc: "Essential seasoning for cooking.", stock: 8, },
+  { name: "Tea Leaves (500g)", desc: "Warm drinks for families.", stock: 8,},
+  { name: "Bread (Loaf)", desc: "Quick meal for breakfast.", stock: 8,},
+  { name: "Milk (1L pack)", desc: "Nutritional drink for children.", stock: 8,},
+  { name: "Cooking Gas Voucher", desc: "Helps families cook safely.", stock: 8,},
+  { name: "Vegetables Basket", desc: "Fresh greens for healthy meals.", stock: 8,},
+  { name: "Fruits Basket", desc: "Boosts vitamins & immunity.", stock: 8,},
+  { name: "Sanitary Pads Pack", desc: "Hygiene for women & girls.", stock: 8,},
+  { name: "Soap Bars", desc: "For hygiene and cleanliness.", stock: 8,},
+  { name: "Toothpaste & Brushes", desc: "Oral care kits.", stock: 8,},
+  { name: "Clothes (Adults)", desc: "For families in need.", stock: 8,},
+  { name: "Clothes (Children)", desc: "Comfortable clothing for kids.", stock: 8,},
+  { name: "Blankets", desc: "Warmth for cold nights.", stock: 8,},
+  { name: "Mosquito Nets", desc: "Protection from malaria.", stock: 8,},
+  { name: "Shoes (Adults)", desc: "Durable footwear for adults.", stock: 8,},
+  { name: "Shoes (Children)", desc: "Footwear for growing children.", stock: 8,},
+  { name: "School Supplies Kit", desc: "Books, pencils, pens for students.", stock: 8, },
+  { name: "Cooking Utensils", desc: "Pots, pans, essential items.", stock: 8,},
+  { name: "Detergent Powder", desc: "Washing clothes and cleaning.", stock: 8,},
+  { name: "Baby Formula", desc: "Nutrition for infants.", stock: 8, },
+  { name: "Diapers Pack", desc: "For infants and toddlers.", stock: 8, },
+  { name: "First Aid Kit", desc: "Basic medical supplies.", stock: 8,},
+  { name: "Wheelchair", desc: "Mobility aid for the disabled.", stock: 8, },
+  { name: "Water Bottles (Pack)", desc: "Clean drinking water.", stock: 8,},
+  { name: "Bedding Sets", desc: "Complete bedding for families.", stock: 8, }
 ];
 
 // === Bible messages ===
@@ -150,7 +150,6 @@ function renderDonorProducts() {
     donorProducts.innerHTML += `
       <div class="product-card">
         <h3>${prod.name}</h3>
-        <img src="${getPhotoURL(prod.name)}" alt="${prod.name}" class="product-img">
         <p>${prod.desc}</p>
         <label for="donateQty${index}">Select Quantity:</label>
         <select id="donateQty${index}">
@@ -170,7 +169,6 @@ function renderRequestProducts() {
     requestProducts.innerHTML += `
       <div class="product-card">
         <h3>${prod.name}</h3>
-        <img src="${getPhotoURL(prod.name)}" alt="${prod.name}" class="product-img">
         <p>${prod.desc}</p>
         <p><strong>In Stock:</strong> ${prod.stock}</p>
         <label for="requestQty${index}">Request Quantity:</label>
@@ -190,7 +188,7 @@ submitDonationBtn.addEventListener("click", () => {
     const qty = parseInt(document.getElementById(`donateQty${index}`).value);
     prod.stock += qty;
   });
-  alert("Thank you for your donation! Stock updated.");
+  alert("Thank you for your donation! Stock updated, see you next when donating.");
   renderRequestProducts();
 });
 
