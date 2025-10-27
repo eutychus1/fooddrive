@@ -2,6 +2,7 @@
 // === Products array with photos (Unsplash Source per product keyword) ===
 // === Products array (no photo links yet) ===
 const products = [
+  { name: "LIMITS", desc: "THE LIMIT OF ONLY HAVING THE INDICATED KGS IS FOR EASE OF KEEPING TRACK OF REMAINING😉🤞✔.", STOCK: 1000, },
   { name: "Rice (5kg bag)", desc: "Staple food for many families.", stock: 8,  },
   { name: "Beans (2kg bag)", desc: "Rich in protein, essential for nutrition.", stock: 8, },
   { name: "Maize Flour (2kg bag)", desc: "Used to make staple meals like ugali.", stock: 8, },
